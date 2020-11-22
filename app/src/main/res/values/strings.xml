@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">SchedulePlanner</string>
+    <string name="title">SchedulePlanner</string>
     <string name="title_welcome">Welcome!</string>
     <string name="submit">Submit</string>
     <string name="signup">Create Account</string>
