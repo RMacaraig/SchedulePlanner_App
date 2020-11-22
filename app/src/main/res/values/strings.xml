@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">SchedulePlanner</string>
+    <string name="title_welcome">Welcome!</string>
+    <string name="submit">Submit</string>
+    <string name="signup">Create Account</string>
+    <string name="signin">Log In</string>
+    <string name="firstname_hint">First Name</string>
+    <string name="lastname_hint">Last Name</string>
+    <string name="confirm_password_hint">Confirm Password</string>
+    <string name="phone_hint">Phone Number</string>
+    <string name="no_disclosure">Other</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
 </resources>
