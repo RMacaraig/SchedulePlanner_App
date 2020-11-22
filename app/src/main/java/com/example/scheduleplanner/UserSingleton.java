@@ -1,9 +1,6 @@
 package com.example.scheduleplanner;
-
 import android.util.Log;
-
 import com.example.scheduleplanner.model.User;
-
 import java.util.ArrayList;
 
 public class UserSingleton {
