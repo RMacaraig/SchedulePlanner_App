@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         userController = new UserController();
         this.fetchUserInfo();
+        //test
     }
 
 
