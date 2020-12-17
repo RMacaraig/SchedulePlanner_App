@@ -1,5 +1,6 @@
 package com.example.scheduleplanner;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -62,7 +63,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         //TODO code for login
         if (userController.validateUser(email, password)){
-            Toast.makeText(getApplicationContext(), "Welcome to the app", Toast.LENGTH_LONG).show();
+           // Toast.makeText(getApplicationContext(), "Welcome to the app", Toast.LENGTH_LONG).show();
+          //  Intent mainIntent = new Intent(this, MainActivity.class);
+           // startActivity(mainIntent);
+            Intent mainIntent = new Intent(this, MainActivity.class);
+            mainIntent.putExtra("EXTRA_EMAIL", email);
+            startActivity(mainIntent);
         }else{
             Toast.makeText(getApplicationContext(), "Invalid email or password", Toast.LENGTH_LONG).show();
         }
