@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddShiftActivity">
+
+    <Spinner
+        android:id="@+id/spinner_user"
+        android:layout_width="361dp"
+        android:layout_height="66dp"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="141dp" />
+
+    <Button
+        android:id="@+id/btn_add_user"
+        android:layout_width="152dp"
+        android:layout_height="67dp"
+        android:text="Button"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="307dp" />
+
+    <EditText
+        android:id="@+id/editTextTime"
+        android:layout_width="332dp"
+        android:layout_height="50dp"
+        android:ems="10"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="227dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

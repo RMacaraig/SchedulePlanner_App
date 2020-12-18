@@ -11,6 +11,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.scheduleplanner.controller.UserController;
+import com.example.scheduleplanner.model.User;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -26,6 +27,12 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         userController = new UserController();
+
+        // Populate with default data
+
+        User defaultUser = new User("Jim", "Doe", "jd@email.com", "password");
+
+        UserSingleton.getInstance().addUser(defaultUser);
         this.referWidgets();
 
     }

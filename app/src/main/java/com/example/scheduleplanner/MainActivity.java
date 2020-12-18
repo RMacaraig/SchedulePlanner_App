@@ -30,10 +30,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void referWidgets(){
         btnEdit = findViewById(R.id.btn_edit);
         btnAdd = findViewById(R.id.btn_add);
+
+        btnAdd.setOnClickListener(this);
+        btnEdit.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()){
             case R.id.btn_edit:
                this.doEdit();
@@ -62,8 +66,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void doAdd(){
-//        Intent signupIntent = new Intent(this, SignUpActivity.class);
-//        startActivity(signupIntent);
+        Intent addShiftIntent= new Intent(this, AddShiftActivity.class);
+        startActivity(addShiftIntent);
     }
 
 }
