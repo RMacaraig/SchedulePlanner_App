@@ -7,26 +7,50 @@
     tools:context=".AddShiftActivity">
 
     <Spinner
+        android:id="@+id/spinner_am_pm"
+        android:layout_width="169dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="216dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginBottom="436dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
         android:id="@+id/spinner_user"
         android:layout_width="361dp"
         android:layout_height="66dp"
-        tools:layout_editor_absoluteX="25dp"
-        tools:layout_editor_absoluteY="141dp" />
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="141dp"
+        android:layout_marginBottom="524dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btn_add_user"
         android:layout_width="152dp"
         android:layout_height="67dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="129dp"
-        tools:layout_editor_absoluteY="307dp" />
+        android:layout_marginStart="129dp"
+        android:layout_marginTop="307dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginBottom="357dp"
+        android:text="Add User"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/editTextTime"
-        android:layout_width="332dp"
-        android:layout_height="50dp"
-        android:ems="10"
-        android:inputType="time"
-        tools:layout_editor_absoluteX="39dp"
-        tools:layout_editor_absoluteY="227dp" />
+    <Spinner
+        android:id="@+id/spinner_time"
+        android:layout_width="169dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="235dp"
+        android:layout_marginBottom="436dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

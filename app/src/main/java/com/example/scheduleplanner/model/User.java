@@ -27,6 +27,8 @@ public class User {
         return password;
     }
 
+    public String getFullName() { return getFirstName() + " " + getLastName(); }
+
     public void setFirstName(String firstName) {
         this.firstName = firstName;
     }
@@ -43,6 +45,7 @@ public class User {
         this.password = password;
     }
 
+
     @Override
     public String toString() {
         return "User{" +
@@ -52,4 +55,5 @@ public class User {
                 ", password='" + password + '\'' +
                 '}';
     }
+
 }

@@ -16,6 +16,10 @@ public class UserController {
 
     }
 
+    public User fetchByFullName(String fullName)  {
+        return UserSingleton.getInstance().getUserByFullName(fullName);
+    }
+
     public ArrayList<User> fetchAllUsers(){
         return UserSingleton.getInstance().getUserList();
     }
@@ -23,4 +27,5 @@ public class UserController {
     public boolean validateUser(String email, String password){
         return UserSingleton.getInstance().validateUser(email, password);
     }
+
 }

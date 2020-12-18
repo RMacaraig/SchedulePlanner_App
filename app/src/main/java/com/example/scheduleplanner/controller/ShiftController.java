@@ -1,13 +1,18 @@
 package com.example.scheduleplanner.controller;
 
-import com.example.scheduleplanner.UserSingleton;
+import com.example.scheduleplanner.ShiftSingleton;
 import com.example.scheduleplanner.model.Shift;
-import com.example.scheduleplanner.model.User;
+
+import java.util.ArrayList;
 
 public class ShiftController {
 
     public void insertShift(Shift newShift){
 
-        UserSingleton.getInstance().addUser(newShift);
+        ShiftSingleton.getInstance().addShift(newShift);
+    }
+
+    public ArrayList<Shift> fetchAllShifts(){
+        return ShiftSingleton.getInstance().getShifts();
     }
 }

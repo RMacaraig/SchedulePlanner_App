@@ -10,7 +10,9 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.scheduleplanner.controller.ShiftController;
 import com.example.scheduleplanner.controller.UserController;
+import com.example.scheduleplanner.model.Shift;
 import com.example.scheduleplanner.model.User;
 
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
@@ -20,6 +22,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     Button btnSignUp;
     Button btnSignIn;
     UserController userController;
+    ShiftController shiftController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +30,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_login);
 
         userController = new UserController();
+        shiftController = new ShiftController();
 
         // Populate with default data
 
-        User defaultUser = new User("Jim", "Doe", "jd@email.com", "password");
+        User shiftUser = new User("Amy", "Brown", "ab@email.com", "password");
 
-        UserSingleton.getInstance().addUser(defaultUser);
+        userController.insertUser(new User("Jim", "Doe", "jd@email.com", "password"));
+        userController.insertUser(new User("Alice", "James", "alice.james@email.com", "password"));
+        userController.insertUser(new User("Michael", "Webster", "mdw@email.com", "password"));
+        userController.insertUser(shiftUser);
+
+        // Add a default shift to the page
+        shiftController.insertShift(new Shift(shiftUser, "10:00 AM"));
+
         this.referWidgets();
 
     }

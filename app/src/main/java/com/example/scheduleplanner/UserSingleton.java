@@ -53,8 +53,15 @@ public class UserSingleton {
         return null;
     }
 
-
-
+    public User getUserByFullName(String fullName) {
+        for (User user: userlist) {
+            if (user.getFullName().equals(fullName)) {
+                return user;
+            }
+        }
+        // User doesn't exist
+        return null;
+    }
 
 
     //
