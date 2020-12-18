@@ -1,5 +1,7 @@
 package com.example.scheduleplanner;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -22,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     ListView shiftListView;
     Button btnEdit;
     Button btnAdd;
+    Button btnLogout;
 
 
     @Override
@@ -42,9 +45,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnEdit = findViewById(R.id.btn_edit);
         btnAdd = findViewById(R.id.btn_add);
         shiftListView = findViewById(R.id.list_shifts);
+        btnLogout = findViewById(R.id.btn_logout);
 
         btnAdd.setOnClickListener(this);
         btnEdit.setOnClickListener(this);
+        btnLogout.setOnClickListener(this);
     }
 
     private void populateListView() {
@@ -72,6 +77,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_add:
                this.doAdd();
                 break;
+            case R.id.btn_logout:
+                this.doLogout();
+                break;
         }
     }
 
@@ -90,6 +98,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void doEdit(){
 //        Intent signupIntent = new Intent(this, SignUpActivity.class);
 //        startActivity(signupIntent);
+    }
+
+    private void doLogout(){
+
+        Intent loginIntent = new Intent(this, LoginActivity.class);
+        startActivity(loginIntent);
     }
 
     private void doAdd(){
